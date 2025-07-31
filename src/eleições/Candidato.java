@@ -1,14 +1,15 @@
 package eleições;
-
+//considerando que candidatos tbm podem votar cadidatos eh classe "filha" de Eleitor
 public class Candidato extends Eleitor{
-	
+	//"id" do candidato para melhor identificação 
 	private String id;
 
-	public Candidato(String nome, String sexo, int idade, String rg, String id) {
+	public Candidato(String nome, char sexo, int idade, String rg, String id) {
 		super(nome, sexo, idade, rg);
 		// TODO Auto-generated constructor stub
-		this.id= id;
+		setId(id);
 	}
+	
 
 	public String getId() {
 		return id;
