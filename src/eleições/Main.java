@@ -3,12 +3,20 @@ package eleições;
 //entrada de dados atraves de metodos sera mais eficiente + swicth case
 import java.util.Scanner;
 
-public class Main {
+
+public class Main extends Candidato{
 	
+	//Construtor da clase main... pq sim?.
+	public Main(String nome, char sexo, int idade, String rg, String id) {
+		super(nome, sexo, idade, rg, id);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void main(String[] args) {
 		
-		Scanner dados = new Scanner(System.in);
-		int Opção = dados.nextInt();
+		Scanner sc = new Scanner(System.in);
+		int Opção = 1;
+		
 		
 		while (Opção != 0) {
 		System.out.println("  Sistemas de Votação.\n");
@@ -18,32 +26,20 @@ public class Main {
 		System.out.println("resultados & Estatisticas   4");
 		System.out.println("Sair                        5");
 		System.out.print("\nSua escolha: ");
-		
-		
-		
-		
-
-		
-		
-		
-		dados.close();
-		
-		
-		
-		switch(Opção){
-		case 1: ;
-		break;
-		case 2:; 
-		break;
-		//case 3: metodoVotar()
-		//break;
-		//case 4: metodo resultados & Estatisticas()
-		//break;
-		case 5: break;
-		
-		
-		
+		Opção = sc.nextInt();
 	
+		switch(Opção){
+		case 1:
+			if Opção {
+				novoEleitor();
+			}
+		case 2:novoCandidato(); 
+		case 3:;
+		case 4:;
+		case 5: Opção= 0; break;
+		default: System.out.println("Opção invalida");
 	}
+		sc.close();
 }
-	}}
+	}
+	}

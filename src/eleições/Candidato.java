@@ -1,8 +1,15 @@
 package eleições;
+
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Scanner;
+
 //considerando que candidatos tbm podem votar cadidatos eh classe "filha" de Eleitor
+
 public class Candidato extends Eleitor{
-	//"id" do candidato para melhor identificação 
-	private String id;
+	
+	private String id; //"id" do candidato para melhor identificação 
+	Set<Candidato> listaCandidatos = new HashSet<>();
 
 	public Candidato(String nome, char sexo, int idade, String rg, String id) {
 		super(nome, sexo, idade, rg);
@@ -18,5 +25,9 @@ public class Candidato extends Eleitor{
 	public void setId(String numero) {
 		this.id = numero;
 	}
-
+    public static void novoCandidato() {
+    	
+    }
+   
+    
 }
